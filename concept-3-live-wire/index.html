@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Icarus Electric - Test, Install, Inspect (Concept 3: Live Wire)</title>
+<meta name="description" content="Icarus Electric: NICEIC approved electrician. Test, install, inspect. Rewires, fuse boards, EICRs, lighting and commercial work, plus straight-talking electrical know-how.">
+<link rel="icon" href="../assets/icarus-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;700;800&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "Icarus Electric",
+  "founder": "Kevin Peck",
+  "slogan": "Test. Install. Inspect.",
+  "telephone": "[Phone number]",
+  "email": "[Email address]",
+  "areaServed": "[Service area]",
+  "url": "[Website address]"
+}
+</script>
+<style>
+:root {
+  --ie-black: #0a0a0a;
+  --ie-char: #161616;
+  --ie-grey: #f1f1ef;
+  --ie-line: #dcdcd8;
+  --ie-white: #ffffff;
+  --ie-text: #111111;
+  --ie-muted: #5a5a5a;
+  --ie-yellow: #ffd400;
+  --ie-red: #e2382a;
+  --ie-red-dark: #b8281c;
+  --ie-font-display: "Anton", Impact, "Arial Narrow", sans-serif;
+  --ie-font-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --ie-maxw: 1240px;
+  --ie-ease: cubic-bezier(.22, 1, .36, 1);
+  --ie-spring: cubic-bezier(.34, 1.56, .64, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; background: var(--ie-white); color: var(--ie-text); font-family: var(--ie-font-body); font-size: 1.0625rem; line-height: 1.6; overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+main { overflow-x: clip; }
+a { color: inherit; }
+h1, h2, h3 { margin: 0; font-family: var(--ie-font-display); font-weight: 400; text-transform: uppercase; line-height: 1; letter-spacing: .005em; }
+p { margin: 0 0 1em; }
+.wrap { max-width: var(--ie-maxw); margin: 0 auto; padding: 0 16px; }
+@media (min-width: 700px) { .wrap { padding: 0 28px; } }
+.ph { background: #e8f0ff; color: #0c2a66; border: 1px dashed #2f5bd3; border-radius: 4px; padding: 0 .3em; white-space: nowrap; font-family: var(--ie-font-body); text-transform: none; font-size: .95em; letter-spacing: 0; }
+.skip { position: absolute; left: 16px; top: 12px; z-index: 100; padding: 10px 16px; background: var(--ie-yellow); color: #000; font-weight: 700; transform: translateY(-200%); }
+.skip:focus { transform: none; }
+:focus-visible { outline: 3px solid var(--ie-yellow); outline-offset: 3px; box-shadow: 0 0 0 6px #000; }
+.concept-bar { background: #2b2b2b; color: #eee; font-size: .9rem; text-align: center; padding: 8px 16px; }
+.concept-bar a { color: #fff; text-underline-offset: 3px; }
+
+.js [data-reveal] { opacity: 0; transform: translateY(30px) scale(.98); transition: opacity .7s var(--ie-ease), transform .7s var(--ie-ease); transition-delay: calc(var(--i, 0) * 80ms); }
+.js [data-reveal].is-in { opacity: 1; transform: none; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 24px; font-family: var(--ie-font-body); font-weight: 800; font-size: 1rem; text-transform: uppercase; letter-spacing: .04em; text-decoration: none; border: 3px solid #000; cursor: pointer; transition: transform .2s var(--ie-ease), box-shadow .2s var(--ie-ease), background .2s; }
+.btn svg { width: 18px; height: 18px; }
+.btn--yellow { background: var(--ie-yellow); color: #000; box-shadow: 5px 5px 0 #000; }
+.btn--yellow:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 #000; }
+.btn--yellow:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 #000; }
+.btn--dark { background: #000; color: #fff; border-color: #fff; box-shadow: 5px 5px 0 var(--ie-red); }
+.btn--dark:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--ie-red); }
+
+.label { display: inline-block; padding: 4px 10px; background: var(--ie-red); color: #fff; font-weight: 800; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
+.label--y { background: var(--ie-yellow); color: #000; }
+.tile .label, .about__text .label { align-self: flex-start; }
+.label--k { background: #000; color: #fff; }
+
+/* utility bar */
+.util { background: #000; color: #cfcfcf; font-size: .88rem; }
+.util .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 20px; min-height: 44px; }
+.social { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
+.social a { display: grid; place-items: center; width: 36px; height: 36px; color: #fff; transition: color .2s, transform .3s var(--ie-spring); }
+.social a:hover { color: var(--ie-yellow); transform: translateY(-2px) rotate(-6deg); }
+.social svg { width: 18px; height: 18px; }
+.util b { color: var(--ie-yellow); }
+
+/* header */
+.header { position: sticky; top: 0; z-index: 50; background: var(--ie-black); color: #fff; border-bottom: 4px solid var(--ie-yellow); }
+.header__inner { display: flex; align-items: center; gap: 16px; min-height: 78px; }
+.brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand__mark { width: 50px; height: 50px; flex: none; }
+.brand__mark .b { animation: flicker 6s infinite; }
+@keyframes flicker { 0%, 88%, 100% { opacity: 1; } 89% { opacity: .2; } 90% { opacity: 1; } 92% { opacity: .35; } 93% { opacity: 1; } }
+.brand__word { display: flex; flex-direction: column; line-height: 1; }
+.brand__name { font-family: Georgia, "Times New Roman", serif; font-size: 1.6rem; font-weight: 700; }
+.brand__sub { font-size: .6rem; letter-spacing: .45em; color: var(--ie-yellow); font-weight: 800; margin-top: 4px; }
+.nav { margin-left: auto; }
+.nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+.nav a { position: relative; display: inline-flex; align-items: center; min-height: 48px; padding: 0 14px; text-decoration: none; font-weight: 800; font-size: .95rem; text-transform: uppercase; letter-spacing: .06em; }
+.nav a::before { content: ""; position: absolute; left: 0; right: 0; bottom: -15px; height: 4px; background: var(--ie-red); transform: scaleX(0); transition: transform .25s var(--ie-ease); }
+.nav a:hover { color: var(--ie-yellow); }
+.nav a:hover::before { transform: scaleX(1); }
+.header__cta { display: none; }
+.nav-toggle { margin-left: auto; width: 50px; height: 50px; background: var(--ie-yellow); border: 0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; color: #000; }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 22px; height: 3px; background: currentColor; position: relative; transition: transform .3s var(--ie-ease), background .3s; }
+.nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; }
+.nav-toggle span::before { top: -7px; } .nav-toggle span::after { top: 7px; }
+.header.is-open .nav-toggle span { background: transparent; }
+.header.is-open .nav-toggle span::before { transform: translateY(7px) rotate(45deg); }
+.header.is-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 999px) {
+  .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; margin-top: 4px; background: #000; padding: 8px 16px 24px; }
+  .header.is-open .nav { display: block; animation: drop .3s var(--ie-ease); }
+  .nav ul { flex-direction: column; }
+  .nav a { width: 100%; min-height: 56px; font-family: var(--ie-font-display); font-weight: 400; font-size: 1.6rem; border-bottom: 1px solid #262626; }
+  .nav a::before { display: none; }
+}
+@media (min-width: 1000px) { .nav-toggle { display: none; } .header__cta { display: inline-flex; min-height: 46px; box-shadow: 4px 4px 0 var(--ie-red); border-color: var(--ie-yellow); } }
+@keyframes drop { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+
+/* hero */
+.hero { background: var(--ie-black); color: #fff; padding: 28px 0 56px; }
+.hero__grid { display: grid; gap: 16px; }
+@media (min-width: 960px) { .hero__grid { grid-template-columns: 1.7fr 1fr; grid-template-rows: 1fr 1fr; min-height: 600px; } .hero__main { grid-row: span 2; } }
+.tile { position: relative; overflow: hidden; background: var(--ie-char); color: #fff; text-decoration: none; display: flex; flex-direction: column; justify-content: flex-end; isolation: isolate; }
+.tile__bg { position: absolute; inset: 0; z-index: -2; }
+.tile__bg img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ie-ease); }
+.tile::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(0,0,0,.05) 20%, rgba(0,0,0,.88)); }
+@media (hover: hover) { .tile:hover .tile__bg img { transform: scale(1.06); } }
+.hero__main { min-height: 560px; padding: 120px 22px 28px; }
+@media (min-width: 700px) { .hero__main { padding: 44px; } }
+@media (max-width: 699px) { .sticker { right: auto; left: 22px; } }
+.hero__main::after { background: linear-gradient(90deg, rgba(0,0,0,.92) 0%, rgba(0,0,0,.7) 45%, rgba(0,0,0,.2) 100%), linear-gradient(180deg, transparent 50%, rgba(0,0,0,.6)); }
+.hero__main .tile__bg img { object-position: 60% 50%; animation: kenburns 18s ease-in-out infinite alternate; }
+@keyframes kenburns { to { transform: scale(1.1) translateX(-2%); } }
+.hero h1 { font-size: clamp(2.8rem, 1.6rem + 5vw, 5.6rem); margin: 14px 0 18px; max-width: 12ch; }
+.hero h1 .w { display: inline-block; opacity: 0; transform: translateY(40px) rotate(3deg); animation: word .7s var(--ie-spring) forwards; animation-delay: calc(var(--d) * 90ms + 200ms); }
+@keyframes word { to { opacity: 1; transform: none; } }
+.hero h1 .y { color: var(--ie-yellow); }
+.hero__sub { font-weight: 700; font-size: 1.15rem; letter-spacing: .08em; text-transform: uppercase; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; opacity: 0; animation: fadein .6s ease 1s forwards; }
+.hero__sub i { width: 9px; height: 9px; border-radius: 50%; background: var(--ie-red); }
+.hero__ctas { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 26px; opacity: 0; animation: fadein .6s ease 1.2s forwards; }
+@keyframes fadein { to { opacity: 1; } }
+.sticker { position: absolute; top: 24px; right: 20px; padding: 10px 18px; background: var(--ie-yellow); color: #000; border: 5px solid #000; outline: 4px solid var(--ie-yellow); font-family: var(--ie-font-display); font-size: clamp(2.2rem, 1.6rem + 2.4vw, 3.6rem); line-height: 1; width: max-content; transform: rotate(-6deg) scale(0); animation: slap .6s var(--ie-spring) 1.3s forwards, wobble 4s ease-in-out 2.4s infinite; }
+@media (min-width: 700px) { .sticker { top: 40px; right: 44px; } }
+.sticker::after { content: ""; position: absolute; left: 50%; top: 100%; width: 0; height: 0; margin-top: 10px; border: 18px solid transparent; border-top: 26px solid var(--ie-yellow); transform: translateX(-50%); animation: bounce 1.2s ease-in-out 2s infinite; }
+@keyframes slap { to { transform: rotate(-6deg) scale(1); } }
+@keyframes wobble { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(-2deg) scale(1.04); } }
+@keyframes bounce { 50% { transform: translate(-50%, 8px); } }
+.side { min-height: 260px; padding: 24px; }
+.side h2 { font-size: clamp(1.7rem, 1.3rem + 1.2vw, 2.3rem); margin: 10px 0 8px; }
+.side p { margin: 0; color: #d8d8d8; }
+.side--red { background: var(--ie-red); }
+.side--red::after { background: radial-gradient(90% 90% at 100% 0%, rgba(255,212,0,.35), transparent 60%); }
+.side .go { position: absolute; right: 20px; top: 20px; width: 52px; height: 52px; display: grid; place-items: center; background: #fff; color: #000; border-radius: 50%; transition: transform .35s var(--ie-spring), background .2s; }
+.side .go svg { width: 22px; height: 22px; }
+.side:hover .go { transform: rotate(-45deg) scale(1.1); background: var(--ie-yellow); }
+.side__art { position: absolute; right: -30px; bottom: -30px; width: 200px; opacity: .22; z-index: -1; animation: spin 40s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ticker */
+.ticker { background: var(--ie-yellow); color: #000; overflow: hidden; border-block: 4px solid #000; }
+.ticker__track { display: flex; width: max-content; animation: slide 26s linear infinite; }
+.ticker:hover .ticker__track { animation-play-state: paused; }
+.ticker span { display: inline-flex; align-items: center; gap: 28px; padding: 14px 28px 14px 0; font-family: var(--ie-font-display); font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2rem); text-transform: uppercase; white-space: nowrap; }
+.ticker span::after { content: ""; width: 22px; height: 22px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M14 1L5 14h6l-2 9 10-14h-6z' fill='%23e2382a'/%3E%3C/svg%3E") center/contain no-repeat; }
+@keyframes slide { to { transform: translateX(-50%); } }
+
+.section { padding: 80px 0; }
+@media (min-width: 900px) { .section { padding: 104px 0; } }
+.shead { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 4px solid #000; }
+.shead h2 { font-size: clamp(2.6rem, 1.8rem + 3.4vw, 4.6rem); margin-top: 10px; }
+.shead p { max-width: 42ch; color: var(--ie-muted); margin: 0; }
+.dark .shead { border-color: var(--ie-yellow); }
+.dark .shead p { color: #bdbdbd; }
+
+/* services */
+.svc { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); border-top: 3px solid #000; border-left: 3px solid #000; }
+.svc a { position: relative; display: flex; flex-direction: column; gap: 10px; padding: 28px 24px 32px; min-height: 250px; border-right: 3px solid #000; border-bottom: 3px solid #000; text-decoration: none; overflow: hidden; isolation: isolate; }
+.svc a::before { content: ""; position: absolute; inset: 0; background: var(--ie-yellow); z-index: -1; transform: translateY(101%); transition: transform .45s var(--ie-ease); }
+.svc a:hover::before, .svc a:focus-visible::before { transform: none; }
+.svc__n { font-family: var(--ie-font-display); font-size: 1.2rem; color: var(--ie-red); }
+.svc h3 { font-size: 2rem; }
+.svc p { margin: 0; color: var(--ie-muted); transition: color .3s; }
+.svc a:hover p { color: #000; }
+.svc__arrow { margin-top: auto; display: inline-flex; align-items: center; gap: 8px; font-weight: 800; text-transform: uppercase; font-size: .9rem; letter-spacing: .06em; }
+.svc__arrow svg { width: 20px; height: 20px; transition: transform .3s var(--ie-spring); }
+.svc a:hover .svc__arrow svg { transform: translateX(8px); }
+.svc__icon { position: absolute; right: 20px; top: 22px; width: 44px; height: 44px; color: #000; transition: transform .5s var(--ie-spring); }
+.svc a:hover .svc__icon { transform: rotate(-12deg) scale(1.15); }
+
+/* know how */
+.dark { background: var(--ie-black); color: #fff; }
+.articles { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr)); }
+.art { display: flex; flex-direction: column; background: var(--ie-char); text-decoration: none; transition: transform .35s var(--ie-ease), box-shadow .35s var(--ie-ease); }
+.art__img { position: relative; aspect-ratio: 16/11; overflow: hidden; display: grid; place-items: center; }
+.art__img::before { content: ""; position: absolute; inset: 0; background: var(--g); transition: transform .8s var(--ie-ease); }
+.art__img svg { position: relative; width: 38%; color: #fff; filter: drop-shadow(0 8px 16px rgba(0,0,0,.35)); transition: transform .5s var(--ie-spring); }
+.art__img .label { position: absolute; left: 14px; top: 14px; }
+.art__body { padding: 20px 20px 24px; display: flex; flex-direction: column; flex: 1; }
+.art h3 { font-size: 1.55rem; line-height: 1.05; margin-bottom: 10px; }
+.art p { color: #bdbdbd; font-size: .98rem; margin: 0 0 16px; }
+.art__meta { margin-top: auto; display: flex; justify-content: space-between; color: #8f8f8f; font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+.art__meta b { color: var(--ie-yellow); }
+@media (hover: hover) {
+  .art:hover { transform: translateY(-6px); box-shadow: 8px 8px 0 var(--ie-yellow); }
+  .art:hover .art__img::before { transform: scale(1.08); }
+  .art:hover .art__img svg { transform: scale(1.12) rotate(-4deg); }
+}
+
+/* tv */
+.tv { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); }
+.vid { position: relative; margin: 0; aspect-ratio: 16/10; overflow: hidden; background: repeating-linear-gradient(45deg, #1d1d1d 0 16px, #191919 16px 32px); display: flex; align-items: flex-end; color: #fff; }
+.vid--photo { background: none; }
+.vid img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ie-ease); }
+.vid::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,.85)); }
+.vid .ph { position: absolute; left: 14px; top: 14px; z-index: 1; }
+.vid__play { position: absolute; left: 50%; top: 50%; z-index: 2; width: 70px; height: 70px; margin: -35px 0 0 -35px; border-radius: 50%; background: var(--ie-red); display: grid; place-items: center; box-shadow: 0 0 0 0 rgba(226,56,42,.6); animation: pulse 2.4s infinite; transition: transform .3s var(--ie-spring); }
+.vid__play svg { width: 26px; height: 26px; margin-left: 4px; color: #fff; }
+@keyframes pulse { 70% { box-shadow: 0 0 0 18px rgba(226,56,42,0); } 100% { box-shadow: 0 0 0 0 rgba(226,56,42,0); } }
+.vid figcaption { position: relative; z-index: 2; padding: 16px 18px; font-family: var(--ie-font-display); font-size: 1.35rem; text-transform: uppercase; line-height: 1.05; }
+.vid figcaption small { display: block; font-family: var(--ie-font-body); font-size: .8rem; font-weight: 700; color: var(--ie-yellow); letter-spacing: .08em; margin-bottom: 4px; }
+.vid:hover .vid__play { transform: scale(1.15); }
+.vid:hover img { transform: scale(1.06); }
+
+/* about */
+.about { display: grid; gap: 40px; align-items: stretch; }
+@media (min-width: 960px) { .about { grid-template-columns: 1fr 1fr; gap: 0; } }
+.about__quote { position: relative; background: var(--ie-red); color: #fff; padding: 44px 28px; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+@media (min-width: 700px) { .about__quote { padding: 64px 56px; } }
+.about__quote h2 { font-size: clamp(2.6rem, 1.8rem + 3.2vw, 4.4rem); }
+.about__quote h2 span { color: var(--ie-yellow); }
+.about__quote blockquote { margin: 28px 0 0; font-family: Georgia, serif; font-style: italic; font-size: 1.35rem; }
+.about__quote cite { display: block; margin-top: 6px; font-family: var(--ie-font-body); font-style: normal; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; font-size: .85rem; }
+.about__quote .bolt-bg { position: absolute; right: -40px; bottom: -60px; width: 260px; opacity: .15; }
+.about__text { padding: 8px 0; }
+@media (min-width: 960px) { .about__text { padding: 24px 0 24px 56px; } }
+.about__text h3 { font-size: 2rem; margin: 12px 0 18px; }
+.about__text p { color: #333; }
+.facts { list-style: none; margin: 24px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 12px; }
+.facts li { padding: 16px; background: var(--ie-grey); border-left: 5px solid var(--ie-yellow); font-weight: 700; line-height: 1.3; }
+.facts b { display: block; font-family: var(--ie-font-display); font-weight: 400; font-size: 2.2rem; line-height: 1; margin-bottom: 4px; }
+
+/* reviews */
+.reviews { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.review { margin: 0; padding: 28px; background: var(--ie-white); border: 3px solid #000; box-shadow: 8px 8px 0 #000; transition: transform .3s var(--ie-ease), box-shadow .3s var(--ie-ease); }
+.review:hover { transform: translate(-3px, -3px); box-shadow: 11px 11px 0 var(--ie-red); }
+.review .stars { color: var(--ie-red); font-size: 1.2rem; letter-spacing: 3px; }
+.review blockquote { margin: 12px 0 14px; }
+.review footer { font-weight: 800; text-transform: uppercase; font-size: .9rem; letter-spacing: .06em; }
+
+/* cta */
+.cta { background: var(--ie-yellow); border-block: 4px solid #000; position: relative; overflow: hidden; }
+.cta__inner { display: grid; gap: 40px; padding: 72px 0; }
+@media (min-width: 960px) { .cta__inner { grid-template-columns: 1fr 1.1fr; align-items: center; padding: 96px 0; } }
+.cta h2 { font-size: clamp(3rem, 2rem + 4.4vw, 6rem); }
+.cta h2 span { display: block; color: var(--ie-red); -webkit-text-stroke: 0; }
+.cta p { font-size: 1.15rem; font-weight: 500; margin-top: 18px; max-width: 34ch; }
+.cta__contact { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 8px; font-weight: 800; }
+.cta__contact li { display: flex; gap: 10px; align-items: center; }
+.cta__contact svg { width: 22px; height: 22px; }
+.form { display: grid; gap: 14px; padding: 24px; background: #fff; border: 4px solid #000; box-shadow: 12px 12px 0 #000; }
+@media (min-width: 600px) { .form { grid-template-columns: 1fr 1fr; padding: 32px; } }
+.field { display: grid; gap: 6px; min-width: 0; }
+.field--full { grid-column: 1 / -1; }
+.field label { font-weight: 800; text-transform: uppercase; font-size: .85rem; letter-spacing: .06em; }
+.field input, .field select, .field textarea { width: 100%; min-height: 52px; padding: 12px 14px; border: 3px solid #000; border-radius: 0; background: #fff; font: inherit; color: #000; transition: box-shadow .2s, transform .2s; }
+.field textarea { min-height: 120px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; box-shadow: 5px 5px 0 var(--ie-red); transform: translate(-2px, -2px); }
+.form .btn { justify-self: start; }
+.form__status { grid-column: 1 / -1; margin: 0; min-height: 1.5em; font-weight: 800; color: #0a7a3c; }
+
+/* footer */
+.footer { background: #000; color: #bdbdbd; padding: 64px 0 32px; font-size: .95rem; }
+.footer__grid { display: grid; gap: 36px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }
+.footer h3 { color: #fff; font-size: 1.4rem; margin-bottom: 14px; }
+.footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.footer a { text-decoration: none; }
+.footer a:hover { color: var(--ie-yellow); }
+.footer .social { display: flex; }
+.footer__base { margin-top: 48px; padding-top: 22px; border-top: 1px solid #262626; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; font-size: .85rem; }
+.niceic { display: inline-flex; gap: 8px; align-items: center; margin-top: 16px; padding: 8px 14px; background: #fff; color: #000; font-weight: 800; font-size: .88rem; }
+.niceic b { color: var(--ie-red); }
+
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .hero h1 .w, .hero__sub, .hero__ctas { opacity: 1; transform: none; }
+  .sticker { transform: rotate(-6deg); }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="concept-bar">Design concept 3 of 3: Live Wire. <a href="../index.html">Back to all concepts</a></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="ie-glow" cx="50%" cy="50%" r="50%"><stop offset=".70" stop-color="#ffd23f"/><stop offset=".84" stop-color="#f7a21b"/><stop offset="1" stop-color="#f7a21b" stop-opacity="0"/></radialGradient>
+    <radialGradient id="ie-disc" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#f4533d"/><stop offset="1" stop-color="#cf2a1d"/></radialGradient>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M14 1L5 14h6l-2 9 10-14h-6z" fill="currentColor"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z" fill="currentColor"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 005 5L15 12l5 2v4a2 2 0 01-2 2A16 16 0 013 5a2 2 0 012-2z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M3.5 6.5L12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="2.2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0112 2.5a7 7 0 017 7C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></symbol>
+    <symbol id="s-yt" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor"/><path d="M10 9l5 3-5 3z" fill="#000"/></symbol>
+    <symbol id="s-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="s-fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 00-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5z" fill="currentColor"/></symbol>
+    <symbol id="s-tt" viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 11-3.5-3.5M14 3c.5 2.8 2.4 4.6 5 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="s-li" viewBox="0 0 24 24"><rect x="3" y="9" width="4" height="12" fill="currentColor"/><circle cx="5" cy="5" r="2.2" fill="currentColor"/><path d="M10 9h4v2c.8-1.4 2.2-2.2 4-2.2 2.4 0 3.5 1.6 3.5 4.4V21h-4v-7c0-1.4-.5-2.2-1.7-2.2S14 12.7 14 14v7h-4z" fill="currentColor"/></symbol>
+    <symbol id="x-board" viewBox="0 0 48 48"><rect x="5" y="9" width="38" height="30" rx="3" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M13 17v9M19 17v9M25 17v9M31 17v9M37 17v9M11 32h26" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></symbol>
+    <symbol id="x-home" viewBox="0 0 48 48"><path d="M6 22L24 7l18 15M11 19v22h26V19" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/><path d="M26 21l-5 8h6l-4 8" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="x-meter" viewBox="0 0 48 48"><path d="M8 32a16 16 0 1132 0" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M24 32l8-10" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><circle cx="24" cy="32" r="3" fill="currentColor"/><path d="M8 40h32" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></symbol>
+    <symbol id="x-bulb" viewBox="0 0 48 48"><path d="M18 36h12M20 42h8M24 6a12 12 0 00-7 21.8c1.2 1 2 2.4 2 4.2h10c0-1.8.8-3.2 2-4.2A12 12 0 0024 6z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="x-shop" viewBox="0 0 48 48"><path d="M6 18l4-10h28l4 10M6 18h36v4a6 6 0 01-12 0 6 6 0 01-12 0 6 6 0 01-12 0zM9 26v15h30V26M20 41V31h8v10" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/></symbol>
+    <symbol id="x-wrench" viewBox="0 0 48 48"><path d="M29 11a8 8 0 0110.4 10.2l-4.2-4.2-4.6 1.2-1.2 4.6 4.2 4.2A8 8 0 0123.4 16.6L9 31a4 4 0 005.6 5.6L29 22.2" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="x-battery" viewBox="0 0 48 48"><rect x="6" y="13" width="32" height="22" rx="3" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M42 20v8" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M24 16l-6 9h6l-2 7 7-10h-6z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<div class="util">
+  <div class="wrap">
+    <ul class="social" aria-label="Icarus Electric on social media">
+      <li><a href="#top" aria-label="YouTube"><svg><use href="#s-yt"/></svg></a></li>
+      <li><a href="#top" aria-label="Instagram"><svg><use href="#s-ig"/></svg></a></li>
+      <li><a href="#top" aria-label="Facebook"><svg><use href="#s-fb"/></svg></a></li>
+      <li><a href="#top" aria-label="TikTok"><svg><use href="#s-tt"/></svg></a></li>
+      <li><a href="#top" aria-label="LinkedIn"><svg><use href="#s-li"/></svg></a></li>
+    </ul>
+    <span><b>NICEIC</b> Approved Contractor · Call <span class="ph">[Phone number]</span></span>
+  </div>
+</div>
+
+<header class="header" data-header>
+  <div class="wrap header__inner">
+    <a class="brand" href="#top" aria-label="Icarus Electric home">
+      <svg class="brand__mark" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="url(#ie-glow)"/><circle cx="100" cy="100" r="72" fill="url(#ie-disc)"/><path class="b" d="M140 2 L80 106 L106 102 L60 198 L124 88 L98 92 Z" fill="#fff" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="round"/></svg>
+      <span class="brand__word"><span class="brand__name">Icarus</span><span class="brand__sub">ELECTRIC</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu" data-nav-toggle><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#know-how">Know how</a></li>
+        <li><a href="#tv">Our work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--yellow header__cta" href="#contact">Get a quote</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="wrap hero__grid">
+      <div class="tile hero__main">
+        <div class="tile__bg"><img src="../assets/van-wide.jpg" alt="" width="1200" height="744"></div>
+        <div class="sticker" aria-hidden="true">SAFE?</div>
+        <span class="label">NICEIC approved electrician</span>
+        <h1 id="hero-title"><span class="w" style="--d:0">When</span> <span class="w" style="--d:1">was</span> <span class="w" style="--d:2">your</span> <span class="w" style="--d:3">property</span> <span class="w y" style="--d:4">last</span> <span class="w y" style="--d:5">tested?</span></h1>
+        <div class="hero__sub">Test <i></i> Install <i></i> Inspect</div>
+        <div class="hero__ctas">
+          <a class="btn btn--yellow" href="#contact">Book a test <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--dark" href="#services">All services</a>
+        </div>
+      </div>
+      <a class="tile side side--red" href="#services">
+        <svg class="side__art" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="90" fill="none" stroke="#fff" stroke-width="10" stroke-dasharray="20 14"/></svg>
+        <span class="go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+        <span class="label label--y">Homes</span>
+        <h2>Rewires &amp; fuse boards</h2>
+        <p>Modern, safe and certified. Finished clean and tidy.</p>
+      </a>
+      <a class="tile side" href="#know-how">
+        <div class="tile__bg" style="background:radial-gradient(80% 90% at 80% 20%, #3a2a00, #111 70%)"></div>
+        <span class="go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+        <span class="label label--k" style="background:#fff;color:#000">Know how</span>
+        <h2>Plug-in batteries: are they safe?</h2>
+        <p>Straight answers on the latest home energy kit.</p>
+      </a>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>Test</span><span>Install</span><span>Inspect</span><span>NICEIC approved</span><span>Domestic &amp; commercial</span><span>Inspired by legends</span><span>Going the extra mile</span>
+      <span>Test</span><span>Install</span><span>Inspect</span><span>NICEIC approved</span><span>Domestic &amp; commercial</span><span>Inspired by legends</span><span>Going the extra mile</span>
+    </div>
+  </div>
+
+  <section class="section" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="shead" data-reveal>
+        <div><span class="label">What we do</span><h2 id="services-title">Services</h2></div>
+        <p>Homes, landlords and businesses. Every job tested thoroughly and finished properly.</p>
+      </div>
+      <div class="svc" data-reveal>
+        <a href="#contact"><svg class="svc__icon" aria-hidden="true"><use href="#x-home"/></svg><span class="svc__n">01</span><h3>Rewires</h3><p>Full and partial rewires, extensions and new builds wired from scratch.</p><span class="svc__arrow">Get a quote <svg><use href="#i-arrow"/></svg></span></a>
+        <a href="#contact"><svg class="svc__icon" aria-hidden="true"><use href="#x-board"/></svg><span class="svc__n">02</span><h3>Fuse boards</h3><p>Modern consumer units with RCBO and surge protection.</p><span class="svc__arrow">Get a quote <svg><use href="#i-arrow"/></svg></span></a>
+        <a href="#contact"><svg class="svc__icon" aria-hidden="true"><use href="#x-meter"/></svg><span class="svc__n">03</span><h3>EICR testing</h3><p>How do you know it's safe? Condition reports for homes, landlords and businesses.</p><span class="svc__arrow">Book a test <svg><use href="#i-arrow"/></svg></span></a>
+        <a href="#contact"><svg class="svc__icon" aria-hidden="true"><use href="#x-bulb"/></svg><span class="svc__n">04</span><h3>Lighting</h3><p>Indoor, outdoor and feature lighting. Things you didn't know were possible.</p><span class="svc__arrow">Get a quote <svg><use href="#i-arrow"/></svg></span></a>
+        <a href="#contact"><svg class="svc__icon" aria-hidden="true"><use href="#x-shop"/></svg><span class="svc__n">05</span><h3>Commercial</h3><p>Shops, offices, restaurants, banks and schools. Fit-outs and maintenance.</p><span class="svc__arrow">Get a quote <svg><use href="#i-arrow"/></svg></span></a>
+        <a href="#contact"><svg class="svc__icon" aria-hidden="true"><use href="#x-wrench"/></svg><span class="svc__n">06</span><h3>Faults &amp; repairs</h3><p>Tripping, flickering or dead circuits, found and fixed properly.</p><span class="svc__arrow">Get help <svg><use href="#i-arrow"/></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark" id="know-how" aria-labelledby="kh-title">
+    <div class="wrap">
+      <div class="shead" data-reveal>
+        <div><span class="label label--y">Know how</span><h2 id="kh-title">Straight-talking advice</h2></div>
+        <p>Short, useful guides for homeowners and landlords, written by the electrician who'll actually do the work.</p>
+      </div>
+      <div class="articles">
+        <a class="art" href="#contact" data-reveal style="--i:0">
+          <div class="art__img" style="--g:linear-gradient(135deg,#e2382a,#7d160f)"><span class="label label--y">Guide</span><svg><use href="#x-meter"/></svg></div>
+          <div class="art__body"><h3>What is an EICR and when do you need one?</h3><p>How often homes and rentals should be tested, and what the codes on your report mean.</p><div class="art__meta"><b>Safety</b><span>4 min read</span></div></div>
+        </a>
+        <a class="art" href="#contact" data-reveal style="--i:1">
+          <div class="art__img" style="--g:linear-gradient(135deg,#ffd400,#f08c00)"><span class="label">Homes</span><svg style="color:#000"><use href="#x-board"/></svg></div>
+          <div class="art__body"><h3>Five signs your fuse board needs upgrading</h3><p>Old fuse wire, no RCD protection, scorch marks and more.</p><div class="art__meta"><b>Fuse boards</b><span>3 min read</span></div></div>
+        </a>
+        <a class="art" href="#contact" data-reveal style="--i:2">
+          <div class="art__img" style="--g:linear-gradient(135deg,#2c2c2c,#000)"><span class="label">News</span><svg style="color:var(--ie-yellow)"><use href="#x-battery"/></svg></div>
+          <div class="art__body"><h3>Plug-in batteries and solar: are they safe?</h3><p>What to know before plugging home energy kit into your sockets.</p><div class="art__meta"><b>Energy</b><span>5 min read</span></div></div>
+        </a>
+        <a class="art" href="#contact" data-reveal style="--i:3">
+          <div class="art__img" style="--g:linear-gradient(135deg,#fff,#d9d9d9)"><span class="label label--k">Planning</span><svg style="color:#000"><use href="#x-home"/></svg></div>
+          <div class="art__body"><h3>Planning a rewire: what to expect</h3><p>Timings, mess, costs and how to keep disruption to a minimum.</p><div class="art__meta"><b>Rewires</b><span>6 min read</span></div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="tv" aria-labelledby="tv-title">
+    <div class="wrap">
+      <div class="shead" data-reveal>
+        <div><span class="label">On the tools</span><h2 id="tv-title">Watch the work</h2></div>
+        <p>Before and afters, tidy boards and finished jobs. Recent projects include new builds, banks, schools, restaurants and Berlin Zoo.</p>
+      </div>
+      <div class="tv">
+        <figure class="vid vid--photo" data-reveal style="--i:0"><img src="../assets/van-wide.jpg" alt="Icarus Electric van" loading="lazy" width="1200" height="744"><span class="vid__play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><figcaption><small>Domestic</small>A day on the tools</figcaption></figure>
+        <figure class="vid" data-reveal style="--i:1"><span class="ph">[Video or photo]</span><span class="vid__play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><figcaption><small>Before &amp; after</small>Consumer unit swap</figcaption></figure>
+        <figure class="vid" data-reveal style="--i:2"><span class="ph">[Video or photo]</span><span class="vid__play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><figcaption><small>Commercial</small>Berlin Zoo refurbishment</figcaption></figure>
+        <figure class="vid" data-reveal style="--i:0"><span class="ph">[Video or photo]</span><span class="vid__play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><figcaption><small>New build</small>House wired from scratch</figcaption></figure>
+        <figure class="vid" data-reveal style="--i:1"><span class="ph">[Video or photo]</span><span class="vid__play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><figcaption><small>Lighting</small>Kitchen feature lighting</figcaption></figure>
+        <figure class="vid" data-reveal style="--i:2"><span class="ph">[Video or photo]</span><span class="vid__play" aria-hidden="true"><svg><use href="#i-play"/></svg></span><figcaption><small>Commercial</small>Restaurant fit-out</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about" aria-labelledby="about-title" style="padding-top:0">
+    <div class="wrap about">
+      <div class="about__quote" data-reveal>
+        <svg class="bolt-bg" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bolt"/></svg>
+        <h2 id="about-title">Inspired by legends. <span>Going the extra mile.</span></h2>
+        <blockquote>“There's a better way to do it. Find it.”<cite>Thomas Edison</cite></blockquote>
+      </div>
+      <div class="about__text" data-reveal style="--i:1">
+        <span class="label label--k">About Icarus</span>
+        <h3>Nothing is a problem. Just another challenge.</h3>
+        <p>Icarus Electric was inspired by the legend of Icarus, with the ethos of going beyond what's possible. Run by Kevin Peck, it's built on ten years in the industry, from building houses from scratch to working in banks, schools, restaurants and a refurbishment project at Berlin Zoo.</p>
+        <p>Today Kevin mainly works in homes, working efficiently, protecting the space he works in, and leaving professional results with clean and tidy finishes as standard. He tests thoroughly and gives people something they didn't even know was possible.</p>
+        <ul class="facts">
+          <li><b data-count="10">10</b>years in the trade</li>
+          <li><b data-count="100" data-suffix="%">100%</b>work by recommendation</li>
+          <li><b>NICEIC</b>approved contractor</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="reviews-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="shead" data-reveal>
+        <div><span class="label">Reviews</span><h2 id="reviews-title">Word of mouth</h2></div>
+        <p>Every job so far has come from a recommendation. Here's why.</p>
+      </div>
+      <div class="reviews">
+        <figure class="review" data-reveal style="--i:0"><div class="stars" aria-label="5 out of 5">★★★★★</div><blockquote><span class="ph">[Customer review]</span></blockquote><footer><span class="ph">[Name, area]</span></footer></figure>
+        <figure class="review" data-reveal style="--i:1"><div class="stars" aria-label="5 out of 5">★★★★★</div><blockquote><span class="ph">[Customer review]</span></blockquote><footer><span class="ph">[Name, area]</span></footer></figure>
+        <figure class="review" data-reveal style="--i:2"><div class="stars" aria-label="5 out of 5">★★★★★</div><blockquote><span class="ph">[Customer review]</span></blockquote><footer><span class="ph">[Name, area]</span></footer></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contact" aria-labelledby="contact-title">
+    <div class="wrap cta__inner">
+      <div data-reveal>
+        <h2 id="contact-title">Got a job? <span>Let's talk.</span></h2>
+        <p>Big or small, domestic or commercial. Tell us what you need and we'll come back with a free, no-nonsense quote.</p>
+        <ul class="cta__contact">
+          <li><svg><use href="#i-phone"/></svg><span class="ph">[Phone number]</span></li>
+          <li><svg><use href="#i-mail"/></svg><span class="ph">[Email address]</span></li>
+          <li><svg><use href="#i-pin"/></svg><span class="ph">[Service area]</span></li>
+        </ul>
+      </div>
+      <form class="form" action="#" method="post" data-demo data-reveal style="--i:1">
+        <div class="field"><label for="c3-name">Name</label><input id="c3-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="c3-phone">Phone</label><input id="c3-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field field--full"><label for="c3-email">Email</label><input id="c3-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field field--full"><label for="c3-type">Job type</label>
+          <select id="c3-type" name="type"><option>Rewire</option><option>Fuse board upgrade</option><option>EICR / testing</option><option>Lighting</option><option>Commercial</option><option>Fault or repair</option><option>Something else</option></select></div>
+        <div class="field field--full"><label for="c3-msg">Details</label><textarea id="c3-msg" name="message"></textarea></div>
+        <button class="btn btn--yellow" type="submit">Send it <svg><use href="#i-arrow"/></svg></button>
+        <p class="form__status" role="status" data-form-status></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="#top" aria-label="Icarus Electric home" style="color:#fff">
+          <svg class="brand__mark" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="url(#ie-glow)"/><circle cx="100" cy="100" r="72" fill="url(#ie-disc)"/><path d="M140 2 L80 106 L106 102 L60 198 L124 88 L98 92 Z" fill="#fff" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="round"/></svg>
+          <span class="brand__word"><span class="brand__name">Icarus</span><span class="brand__sub">ELECTRIC</span></span>
+        </a>
+        <span class="niceic"><b>NICEIC</b> Approved Contractor</span>
+      </div>
+      <div><h3>Services</h3><ul><li><a href="#services">Rewires</a></li><li><a href="#services">Fuse boards</a></li><li><a href="#services">EICR testing</a></li><li><a href="#services">Lighting</a></li><li><a href="#services">Commercial</a></li></ul></div>
+      <div><h3>Explore</h3><ul><li><a href="#know-how">Know how</a></li><li><a href="#tv">Our work</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h3>Icarus Electric</h3><ul><li>Proprietor: Kevin Peck</li><li><span class="ph">[Business address]</span></li><li><span class="ph">[Phone number]</span></li><li><span class="ph">[Email address]</span></li></ul></div>
+    </div>
+    <div class="footer__base"><span>© <span data-year>2026</span> Icarus Electric. All rights reserved.</span><ul class="social" aria-label="Social media" style="margin:-8px 0"><li><a href="#top" aria-label="YouTube"><svg><use href="#s-yt"/></svg></a></li><li><a href="#top" aria-label="Instagram"><svg><use href="#s-ig"/></svg></a></li><li><a href="#top" aria-label="Facebook"><svg><use href="#s-fb"/></svg></a></li><li><a href="#top" aria-label="TikTok"><svg><use href="#s-tt"/></svg></a></li></ul></div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const d = document;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  d.documentElement.classList.add('js');
+
+  const header = d.querySelector('[data-header]');
+  const toggle = d.querySelector('[data-nav-toggle]');
+  const setOpen = (open) => { header.classList.toggle('is-open', open); toggle.setAttribute('aria-expanded', String(open)); };
+  toggle.addEventListener('click', () => setOpen(!header.classList.contains('is-open')));
+  d.querySelectorAll('#site-nav a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+
+  const countUp = (el) => {
+    const end = +el.dataset.count, suf = el.dataset.suffix || ''; if (reduce) return;
+    const t0 = performance.now(), dur = 1300;
+    const tick = (t) => { const p = Math.min((t - t0) / dur, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))) + suf; if (p < 1) requestAnimationFrame(tick); };
+    requestAnimationFrame(tick);
+  };
+  const els = d.querySelectorAll('[data-reveal]');
+  if (reduce || !('IntersectionObserver' in window)) { els.forEach((e) => e.classList.add('is-in')); }
+  else {
+    const io = new IntersectionObserver((entries) => entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add('is-in');
+      en.target.querySelectorAll('[data-count]').forEach(countUp);
+      io.unobserve(en.target);
+    }), { rootMargin: '0px 0px -8% 0px' });
+    els.forEach((e) => io.observe(e));
+  }
+
+  d.querySelectorAll('form[data-demo]').forEach((f) => f.addEventListener('submit', (e) => {
+    e.preventDefault();
+    f.querySelector('[data-form-status]').textContent = 'Thanks! This is a design concept, so the form does not send yet.';
+  }));
+  d.querySelectorAll('[data-year]').forEach((y) => { y.textContent = new Date().getFullYear(); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Icarus Electric - Website design concepts</title>
+<link rel="icon" href="assets/icarus-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Serif+Display&family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap">
+<style>
+:root {
+  --ie-bg: #f6f4f1;
+  --ie-ink: #16130f;
+  --ie-muted: #5d5751;
+  --ie-line: #e2ddd6;
+  --ie-white: #ffffff;
+  --ie-red: #d02a1e;
+  --ie-maxw: 1240px;
+  --ie-ease: cubic-bezier(.22, 1, .36, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--ie-bg); color: var(--ie-ink); font-family: "Inter", "Helvetica Neue", Arial, sans-serif; font-size: 1.0625rem; line-height: 1.6; }
+img { display: block; max-width: 100%; }
+.chooser { max-width: var(--ie-maxw); margin: 0 auto; padding: 48px 16px 72px; }
+@media (min-width: 700px) { .chooser { padding: 64px 32px 88px; } }
+.head { display: flex; flex-wrap: wrap; align-items: center; gap: 24px 32px; }
+.head__mark { width: 104px; height: 104px; flex: none; animation: glow 5s ease-in-out infinite; }
+@keyframes glow { 50% { filter: drop-shadow(0 0 22px rgba(247,162,27,.55)); } }
+.head__intro { flex: 1 1 360px; min-width: 0; }
+.head h1 { margin: 0; font-family: "Space Grotesk", Arial, sans-serif; font-size: clamp(2rem, 1.4rem + 2.4vw, 3.2rem); line-height: 1.1; letter-spacing: -.01em; }
+.head p { margin: 12px 0 0; color: var(--ie-muted); max-width: 46em; }
+.grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); margin-top: 48px; }
+.card { position: relative; min-width: 0; display: flex; flex-direction: column; background: var(--ie-white); border: 1px solid var(--ie-line); border-radius: 18px; overflow: hidden; transition: transform .3s var(--ie-ease), box-shadow .3s var(--ie-ease); animation: rise .8s var(--ie-ease) both; animation-delay: calc(var(--i) * 120ms); }
+@keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+.card:focus-within { outline: 3px solid var(--ie-ink); outline-offset: 4px; }
+@media (hover: hover) { .card:hover { transform: translateY(-6px); box-shadow: 0 28px 44px -26px rgba(22,19,15,.45); } .card:hover .card__shot img { transform: translateY(-4%); } }
+.card__shot { aspect-ratio: 16/10; overflow: hidden; border-bottom: 1px solid var(--ie-line); background: #ddd; }
+.card__shot img { width: 100%; height: auto; transition: transform 1.6s var(--ie-ease); }
+.card__body { padding: 24px 26px 26px; display: flex; flex-direction: column; flex: 1; }
+.card__num { color: var(--ie-muted); font-size: .95rem; }
+.card__name { margin: 2px 0 10px; font-size: 2rem; line-height: 1.1; font-weight: 400; }
+.card--eclipse .card__name { font-family: "Space Grotesk", Arial, sans-serif; font-weight: 700; }
+.card--daylight .card__name { font-family: "DM Serif Display", Georgia, serif; }
+.card--live .card__name { font-family: "Anton", Impact, sans-serif; text-transform: uppercase; letter-spacing: .01em; }
+.card p { margin: 0 0 18px; }
+.inspo { font-size: .95rem; color: var(--ie-muted); margin: -6px 0 18px; }
+.swatches { list-style: none; margin: 0 0 18px; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.swatches li { min-width: 0; font-size: .85rem; line-height: 1.3; }
+.chip { display: block; height: 38px; margin-bottom: 6px; border-radius: 8px; border: 1px solid rgba(0,0,0,.12); }
+.hex { display: block; color: var(--ie-muted); font-variant-numeric: tabular-nums; }
+.fonts { margin: 0 0 20px; color: var(--ie-muted); font-size: .95rem; }
+.link { position: relative; display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; min-height: 48px; margin-top: auto; color: var(--ie-red); font-weight: 700; text-decoration: none; }
+.link::before { content: ""; position: absolute; inset: 0; }
+.link::after { content: ""; position: absolute; left: 0; right: 0; bottom: 8px; height: 2px; background: currentColor; transform-origin: left; transition: transform .3s var(--ie-ease); }
+.link:focus-visible { outline: none; }
+.link:hover::after, .link:focus-visible::after { transform: scaleX(.35); }
+.notes { margin-top: 56px; display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); }
+.note { background: var(--ie-white); border: 1px solid var(--ie-line); border-radius: 18px; padding: 26px; }
+.note h2 { margin: 0 0 10px; font-family: "Space Grotesk", Arial, sans-serif; font-size: 1.3rem; }
+.note ul { margin: 0; padding-left: 20px; color: var(--ie-muted); }
+.note li { margin-bottom: 6px; }
+.ph { background: #fff4cc; color: #4a3b00; border: 1px dashed #8a6a00; border-radius: 5px; padding: 0 .3em; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<main class="chooser">
+  <div class="head">
+    <img class="head__mark" src="assets/icarus-mark.svg" alt="Icarus Electric logo mark" width="104" height="104">
+    <div class="head__intro">
+      <h1>Icarus Electric: website concepts</h1>
+      <p>Three directions for Kevin's new website. Each uses the same brand (the red sun and lightning bolt, "Test · Install · Inspect") and follows the structure of the sites Kevin likes, <b>eliteelectrical.co.uk</b> and <b>efixx.co.uk</b>. They're kept simple, with subtle animation, clear services and a strong call to action on every page.</p>
+    </div>
+  </div>
+
+  <div class="grid">
+    <article class="card card--eclipse" style="--i:0">
+      <div class="card__shot"><img src="assets/previews/concept-1.jpg" alt="Preview of the Eclipse concept homepage" width="800" height="1100" loading="lazy"></div>
+      <div class="card__body">
+        <div class="card__num">Concept 1</div>
+        <h2 class="card__name">Eclipse</h2>
+        <p class="inspo">Closest to Elite Electrical</p>
+        <p>Dark and premium, like the black panels on the van. A glowing sun with a bolt that draws itself in, a featured project, case-study cards and expandable service pillars.</p>
+        <ul class="swatches" aria-label="Eclipse palette">
+          <li><span class="chip" style="background:#0d0d0f"></span>Night<span class="hex">#0d0d0f</span></li>
+          <li><span class="chip" style="background:#e2382a"></span>Red<span class="hex">#e2382a</span></li>
+          <li><span class="chip" style="background:#f7a21b"></span>Amber<span class="hex">#f7a21b</span></li>
+          <li><span class="chip" style="background:#f4f1ec"></span>Light<span class="hex">#f4f1ec</span></li>
+        </ul>
+        <div class="fonts">Space Grotesk and Inter</div>
+        <a class="link" href="concept-1-eclipse/index.html">View the Eclipse concept</a>
+      </div>
+    </article>
+    <article class="card card--daylight" style="--i:1">
+      <div class="card__shot"><img src="assets/previews/concept-2.jpg" alt="Preview of the Daylight concept homepage" width="800" height="1100" loading="lazy"></div>
+      <div class="card__body">
+        <div class="card__num">Concept 2</div>
+        <h2 class="card__name">Daylight</h2>
+        <p class="inspo">A friendly, domestic take on both sites</p>
+        <p>Light, warm and built to turn visits into enquiries. Floating trust badges, a house that wires itself for the EICR section, filterable project gallery, FAQs for Google and a sticky call bar on mobile.</p>
+        <ul class="swatches" aria-label="Daylight palette">
+          <li><span class="chip" style="background:#fbf8f4"></span>Paper<span class="hex">#fbf8f4</span></li>
+          <li><span class="chip" style="background:#1c1917"></span>Ink<span class="hex">#1c1917</span></li>
+          <li><span class="chip" style="background:#d02a1e"></span>Red<span class="hex">#d02a1e</span></li>
+          <li><span class="chip" style="background:#f5a524"></span>Amber<span class="hex">#f5a524</span></li>
+        </ul>
+        <div class="fonts">DM Serif Display and DM Sans</div>
+        <a class="link" href="concept-2-daylight/index.html">View the Daylight concept</a>
+      </div>
+    </article>
+    <article class="card card--live" style="--i:2">
+      <div class="card__shot"><img src="assets/previews/concept-3.jpg" alt="Preview of the Live Wire concept homepage" width="800" height="1100" loading="lazy"></div>
+      <div class="card__body">
+        <div class="card__num">Concept 3</div>
+        <h2 class="card__name">Live Wire</h2>
+        <p class="inspo">Closest to eFIXX</p>
+        <p>Bold, punchy and media-led. The van's "When was your property last tested?" as the headline, a "SAFE?" sticker, scrolling ticker, a Know How advice section for Google, and video-style work tiles.</p>
+        <ul class="swatches" aria-label="Live Wire palette">
+          <li><span class="chip" style="background:#0a0a0a"></span>Black<span class="hex">#0a0a0a</span></li>
+          <li><span class="chip" style="background:#ffd400"></span>Yellow<span class="hex">#ffd400</span></li>
+          <li><span class="chip" style="background:#e2382a"></span>Red<span class="hex">#e2382a</span></li>
+          <li><span class="chip" style="background:#ffffff"></span>White<span class="hex">#ffffff</span></li>
+        </ul>
+        <div class="fonts">Anton and Archivo</div>
+        <a class="link" href="concept-3-live-wire/index.html">View the Live Wire concept</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="notes">
+    <section class="note">
+      <h2>In every concept</h2>
+      <ul>
+        <li>Services, recent work, about Kevin and the Icarus story, reviews and an enquiry form.</li>
+        <li>NICEIC Approved Contractor shown up front, with "Test · Install · Inspect" and the Thomas Edison quote from the van.</li>
+        <li>Built for Google: page titles and descriptions, local business schema and service-led headings.</li>
+        <li>Works on phones, and the animation turns off for anyone who has reduced motion switched on.</li>
+      </ul>
+    </section>
+    <section class="note">
+      <h2>Still to come</h2>
+      <ul>
+        <li>Anything shown like <span class="ph">[this]</span> is a placeholder: phone, email, service area, reviews and project photos.</li>
+        <li>The logo mark is redrawn from the van photo. We'll swap in the original artwork when we get it.</li>
+        <li>The services list is a typical set and needs checking with Kevin.</li>
+        <li>The forms are for show only and don't send anything.</li>
+      </ul>
+    </section>
+  </div>
+</main>
+</body>
+</html>

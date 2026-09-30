@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Icarus Electric - Domestic &amp; Commercial Electrician (Concept 1: Eclipse)</title>
+<meta name="description" content="Icarus Electric is an NICEIC approved domestic and commercial electrician. Rewires, consumer units, testing and inspection, lighting and commercial fit-outs, finished clean and tidy as standard.">
+<link rel="icon" href="../assets/icarus-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Cormorant+Garamond:ital,wght@1,500&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "Icarus Electric",
+  "founder": "Kevin Peck",
+  "description": "NICEIC approved domestic and commercial electrician. Test, install, inspect.",
+  "telephone": "[Phone number]",
+  "email": "[Email address]",
+  "areaServed": "[Service area]",
+  "url": "[Website address]"
+}
+</script>
+<style>
+:root {
+  --ie-bg: #0d0d0f;
+  --ie-bg-2: #151518;
+  --ie-card: #1b1b1f;
+  --ie-line: #2c2c32;
+  --ie-text: #f4f1ec;
+  --ie-muted: #a9a4a0;
+  --ie-red: #e2382a;
+  --ie-red-strong: #c42a1d;
+  --ie-amber: #f7a21b;
+  --ie-sun: #ffd23f;
+  --ie-font-display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --ie-font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --ie-font-quote: "Cormorant Garamond", Georgia, serif;
+  --ie-maxw: 1200px;
+  --ie-radius: 14px;
+  --ie-ease: cubic-bezier(.22, 1, .36, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ie-bg);
+  color: var(--ie-text);
+  font-family: var(--ie-font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+main { overflow-x: clip; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--ie-font-display); line-height: 1.1; margin: 0; letter-spacing: -.01em; }
+p { margin: 0 0 1em; }
+.wrap { max-width: var(--ie-maxw); margin: 0 auto; padding: 0 16px; }
+@media (min-width: 700px) { .wrap { padding: 0 32px; } }
+.ph { background: #3a3000; color: #ffe27a; border: 1px dashed #ffd23f; border-radius: 5px; padding: 0 .3em; white-space: nowrap; }
+.skip { position: absolute; left: 16px; top: 12px; z-index: 100; padding: 10px 16px; background: var(--ie-red); color: #fff; border-radius: 8px; transform: translateY(-200%); }
+.skip:focus { transform: none; }
+:focus-visible { outline: 3px solid var(--ie-sun); outline-offset: 3px; }
+
+.concept-bar { background: #000; color: #ddd; font-size: .9rem; text-align: center; padding: 8px 16px; border-bottom: 1px solid var(--ie-line); }
+.concept-bar a { color: #fff; text-underline-offset: 3px; }
+
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--ie-font-display); font-weight: 600; font-size: .8rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ie-amber); }
+.eyebrow::before { content: ""; width: 28px; height: 2px; background: currentColor; }
+.section { padding: 88px 0; }
+@media (min-width: 900px) { .section { padding: 120px 0; } }
+.section-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 32px; margin-bottom: 48px; }
+.section-head h2 { font-size: clamp(2rem, 1.4rem + 2.4vw, 3.2rem); margin-top: 12px; max-width: 16ch; }
+.section-head p { color: var(--ie-muted); max-width: 44ch; margin: 0; }
+
+.btn { position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 999px; font-family: var(--ie-font-display); font-weight: 600; font-size: 1rem; text-decoration: none; letter-spacing: .02em; border: 1px solid transparent; transition: transform .25s var(--ie-ease), background .25s, border-color .25s; }
+.btn--primary { background: var(--ie-red); color: #fff; }
+.btn--primary::after { content: ""; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.35) 50%, transparent 70%); transform: translateX(-120%); transition: transform .7s var(--ie-ease); }
+.btn--primary:hover::after { transform: translateX(120%); }
+.btn--primary:hover { background: var(--ie-red-strong); }
+.btn--ghost { color: var(--ie-text); border-color: #4a4a52; }
+.btn--ghost:hover { border-color: var(--ie-text); }
+.btn:hover { transform: translateY(-2px); }
+.btn svg { width: 18px; height: 18px; transition: transform .25s var(--ie-ease); }
+.btn:hover svg { transform: translateX(4px); }
+
+/* reveal */
+.js [data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--ie-ease), transform .8s var(--ie-ease); transition-delay: calc(var(--i, 0) * 90ms); }
+.js [data-reveal].is-in { opacity: 1; transform: none; }
+
+/* header */
+.header { position: sticky; top: 0; z-index: 50; background: rgba(13,13,15,.72); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid transparent; transition: border-color .3s, background .3s; }
+.header.is-scrolled { border-bottom-color: var(--ie-line); background: rgba(13,13,15,.92); }
+.header__inner { display: flex; align-items: center; gap: 16px; min-height: 76px; }
+.brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand__mark { width: 46px; height: 46px; flex: none; }
+.brand__word { display: flex; flex-direction: column; line-height: 1; }
+.brand__name { font-family: Georgia, "Times New Roman", serif; font-size: 1.5rem; font-weight: 700; letter-spacing: -.01em; }
+.brand__sub { font-size: .62rem; letter-spacing: .42em; color: var(--ie-amber); margin-top: 4px; font-weight: 600; }
+.nav { margin-left: auto; }
+.nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 4px; }
+.nav a { position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; text-decoration: none; font-weight: 500; color: #d9d4ce; }
+.nav a::after { content: ""; position: absolute; left: 14px; right: 14px; bottom: 8px; height: 2px; background: var(--ie-red); transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ie-ease); }
+.nav a:hover { color: #fff; }
+.nav a:hover::after { transform: scaleX(1); }
+.header__cta { display: none; }
+.nav-toggle { margin-left: auto; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: transparent; border: 1px solid var(--ie-line); border-radius: 12px; color: var(--ie-text); cursor: pointer; }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { display: block; width: 20px; height: 2px; background: currentColor; position: relative; transition: transform .3s var(--ie-ease), background .3s; }
+.nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; }
+.nav-toggle span::before { top: -6px; } .nav-toggle span::after { top: 6px; }
+.header.is-open .nav-toggle span { background: transparent; }
+.header.is-open .nav-toggle span::before { transform: translateY(6px) rotate(45deg); }
+.header.is-open .nav-toggle span::after { transform: translateY(-6px) rotate(-45deg); }
+@media (max-width: 959px) {
+  .nav { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--ie-bg-2); border-bottom: 1px solid var(--ie-line); padding: 8px 16px 20px; }
+  .header.is-open .nav { display: block; animation: drop .35s var(--ie-ease); }
+  .nav ul { flex-direction: column; }
+  .nav a { width: 100%; font-size: 1.15rem; min-height: 52px; border-bottom: 1px solid var(--ie-line); }
+}
+@media (min-width: 960px) {
+  .nav-toggle { display: none; }
+  .header__cta { display: inline-flex; min-height: 44px; padding: 0 20px; }
+}
+@keyframes drop { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+
+/* hero */
+.hero { position: relative; overflow: hidden; min-height: calc(100svh - 76px - 40px); display: flex; align-items: center; padding: 64px 0 96px; isolation: isolate; }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: -2; background:
+  radial-gradient(60% 50% at 78% 45%, rgba(226,56,42,.22), transparent 70%),
+  radial-gradient(40% 40% at 80% 45%, rgba(247,162,27,.18), transparent 70%),
+  linear-gradient(180deg, #0d0d0f, #09090a); }
+.hero__grid { position: absolute; inset: 0; z-index: -1; opacity: .35; background-image: linear-gradient(var(--ie-line) 1px, transparent 1px), linear-gradient(90deg, var(--ie-line) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(70% 60% at 70% 40%, #000 20%, transparent 75%); -webkit-mask-image: radial-gradient(70% 60% at 70% 40%, #000 20%, transparent 75%); }
+.hero__inner { display: grid; gap: 48px; align-items: center; width: 100%; }
+@media (min-width: 960px) { .hero__inner { grid-template-columns: 1.3fr .7fr; } }
+.hero h1 { font-size: clamp(2.5rem, 1.5rem + 4vw, 4.6rem); font-weight: 700; margin: 18px 0 22px; }
+.hero h1 .line { display: block; overflow: hidden; padding-bottom: .06em; }
+.hero h1 .line > span { display: inline-block; animation: rise 1s var(--ie-ease) both; animation-delay: calc(var(--d, 0) * 120ms + 150ms); }
+.hero h1 em { font-style: normal; background: linear-gradient(90deg, var(--ie-sun), var(--ie-amber) 45%, var(--ie-red)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero__lede { font-size: 1.15rem; color: #cfc9c2; max-width: 38em; animation: fade 1s var(--ie-ease) .6s both; }
+.hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; animation: fade 1s var(--ie-ease) .8s both; }
+.hero__trust { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 40px; padding: 0; list-style: none; color: var(--ie-muted); font-size: .95rem; animation: fade 1s var(--ie-ease) 1s both; }
+.hero__trust li { display: inline-flex; align-items: center; gap: 8px; }
+.hero__trust svg { width: 18px; height: 18px; color: var(--ie-amber); flex: none; }
+@keyframes rise { from { transform: translateY(105%); } to { transform: none; } }
+@keyframes fade { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+.sun { position: relative; width: min(100%, 460px); aspect-ratio: 1; margin: 0 auto; }
+.sun__glow { position: absolute; inset: -12%; border-radius: 50%; background: radial-gradient(circle, rgba(255,210,63,.55) 0%, rgba(247,162,27,.28) 38%, transparent 68%); animation: pulse 5s ease-in-out infinite; }
+.sun__ring { position: absolute; inset: 4%; border-radius: 50%; border: 1px dashed rgba(247,162,27,.35); animation: spin 60s linear infinite; }
+.sun__ring--2 { inset: -6%; border-style: solid; border-color: rgba(255,255,255,.06); animation-duration: 90s; animation-direction: reverse; }
+.sun svg { position: relative; width: 100%; height: 100%; }
+.sun .bolt { stroke-dasharray: 700; stroke-dashoffset: 700; animation: draw 1.4s var(--ie-ease) .5s forwards, flash 7s ease-in-out 2.4s infinite; fill-opacity: 0; }
+.sun .disc { transform-origin: 100px 100px; animation: pop 1.1s var(--ie-ease) .2s both; }
+@keyframes pulse { 0%, 100% { transform: scale(1); opacity: .9; } 50% { transform: scale(1.06); opacity: 1; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes draw { 60% { fill-opacity: 0; } to { stroke-dashoffset: 0; fill-opacity: 1; } }
+@keyframes flash { 0%, 92%, 100% { filter: none; } 94% { filter: drop-shadow(0 0 14px #fff) brightness(1.4); } 96% { filter: none; } 98% { filter: drop-shadow(0 0 10px #fff); } }
+@keyframes pop { from { transform: scale(.6); opacity: 0; } to { transform: none; opacity: 1; } }
+.scroll-cue { position: absolute; left: 50%; bottom: 24px; transform: translateX(-50%); width: 26px; height: 42px; border: 2px solid #55555d; border-radius: 14px; }
+.scroll-cue::after { content: ""; position: absolute; left: 50%; top: 8px; width: 4px; height: 8px; margin-left: -2px; border-radius: 2px; background: var(--ie-amber); animation: cue 1.8s ease-in-out infinite; }
+@keyframes cue { 0% { opacity: 0; transform: translateY(0); } 40% { opacity: 1; } 100% { opacity: 0; transform: translateY(14px); } }
+
+/* marquee */
+.marquee { border-block: 1px solid var(--ie-line); background: var(--ie-bg-2); overflow: hidden; }
+.marquee__label { text-align: center; color: var(--ie-muted); font-size: .8rem; letter-spacing: .2em; text-transform: uppercase; padding-top: 22px; }
+.marquee__track { display: flex; width: max-content; animation: slide 36s linear infinite; padding: 18px 0 24px; }
+.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee__track span { display: inline-flex; align-items: center; gap: 36px; padding-right: 36px; font-family: var(--ie-font-display); font-size: clamp(1.3rem, 1rem + 1.4vw, 2rem); font-weight: 600; color: #e7e2dc; white-space: nowrap; }
+.marquee__track span::after { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--ie-red); box-shadow: 0 0 12px var(--ie-amber); }
+@keyframes slide { to { transform: translateX(-50%); } }
+
+/* featured */
+.featured { display: grid; gap: 0; border-radius: var(--ie-radius); overflow: hidden; background: var(--ie-card); border: 1px solid var(--ie-line); }
+@media (min-width: 900px) { .featured { grid-template-columns: 1.2fr 1fr; } }
+.featured__media { position: relative; min-height: 320px; }
+.featured__body { padding: 36px 28px; display: flex; flex-direction: column; justify-content: center; }
+@media (min-width: 900px) { .featured__body { padding: 56px; } }
+.featured__body h3 { font-size: clamp(1.8rem, 1.3rem + 1.8vw, 2.6rem); margin: 14px 0 16px; }
+.featured__body p { color: #cfc9c2; }
+.tag { display: inline-block; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--ie-sun); }
+
+.photo { position: relative; overflow: hidden; background: radial-gradient(80% 80% at 30% 20%, #2a2a31, #141417); display: grid; place-items: center; color: #8b857f; font-size: .9rem; text-align: center; }
+.photo::before { content: ""; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M24 4 L14 22 L20 21 L14 36 L28 16 L21 17 Z' fill='none' stroke='%23ffffff' stroke-opacity='.05'/%3E%3C/svg%3E") 0 0/64px 64px; }
+.photo > span:not(.ph) { position: relative; padding: 16px; }
+.photo > .ph { position: relative; }
+.photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ie-ease); }
+
+/* work grid */
+.work { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); margin-top: 20px; }
+.work__card { position: relative; border-radius: var(--ie-radius); overflow: hidden; background: var(--ie-card); border: 1px solid var(--ie-line); text-decoration: none; display: flex; flex-direction: column; transition: transform .4s var(--ie-ease), border-color .4s; }
+.work__card .photo { aspect-ratio: 4/3; }
+.work__card .photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(13,13,15,.7)); }
+.work__body { padding: 20px 22px 24px; }
+.work__body h3 { font-size: 1.3rem; margin: 6px 0 6px; }
+.work__body p { color: var(--ie-muted); margin: 0; font-size: .98rem; }
+.work__more { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-weight: 600; color: var(--ie-text); font-size: .95rem; }
+.work__more svg { width: 16px; height: 16px; transition: transform .3s var(--ie-ease); }
+@media (hover: hover) {
+  .work__card:hover { transform: translateY(-6px); border-color: #4a4a52; }
+  .work__card:hover .photo img { transform: scale(1.06); }
+  .work__card:hover .work__more svg { transform: translateX(5px); }
+}
+
+/* services */
+.services { display: grid; gap: 48px; }
+@media (min-width: 960px) { .services { grid-template-columns: .8fr 1.2fr; } }
+.services__intro p { color: var(--ie-muted); }
+.services__intro .sticky { position: sticky; top: 110px; }
+.acc { border-top: 1px solid var(--ie-line); }
+.acc details { border-bottom: 1px solid var(--ie-line); }
+.acc summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 18px; padding: 24px 4px; font-family: var(--ie-font-display); font-size: clamp(1.2rem, 1rem + .8vw, 1.6rem); font-weight: 600; transition: color .3s; }
+.acc summary::-webkit-details-marker { display: none; }
+.acc summary:hover { color: var(--ie-sun); }
+.acc__num { font-size: .85rem; color: var(--ie-red); font-weight: 700; letter-spacing: .1em; }
+.acc__icon { position: relative; width: 32px; height: 32px; border: 1px solid #4a4a52; border-radius: 50%; transition: transform .4s var(--ie-ease), background .3s, border-color .3s; }
+.acc__icon::before, .acc__icon::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 2px; margin: -1px 0 0 -6px; background: currentColor; }
+.acc__icon::after { transform: rotate(90deg); transition: transform .4s var(--ie-ease); }
+.acc details[open] .acc__icon { transform: rotate(180deg); background: var(--ie-red); border-color: var(--ie-red); }
+.acc details[open] .acc__icon::after { transform: rotate(0); }
+.acc__body { padding: 0 4px 26px 52px; color: #cfc9c2; animation: fade .5s var(--ie-ease); }
+.acc__body ul { margin: 12px 0 0; padding-left: 18px; color: var(--ie-muted); }
+
+/* process band */
+.band { position: relative; overflow: hidden; background: linear-gradient(135deg, #1a0d0b, #0d0d0f 60%); border-block: 1px solid var(--ie-line); }
+.band::before { content: ""; position: absolute; right: -200px; top: -200px; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(226,56,42,.25), transparent 65%); }
+.steps { position: relative; display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.step { padding: 32px 28px; border-radius: var(--ie-radius); background: rgba(255,255,255,.03); border: 1px solid var(--ie-line); }
+.step__n { font-family: var(--ie-font-display); font-size: 3.4rem; font-weight: 700; line-height: 1; background: linear-gradient(180deg, var(--ie-sun), var(--ie-red)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.step h3 { font-size: 1.6rem; margin: 14px 0 10px; letter-spacing: .04em; text-transform: uppercase; }
+.step p { color: var(--ie-muted); margin: 0; }
+.stats { position: relative; display: grid; gap: 1px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); margin-top: 56px; background: var(--ie-line); border: 1px solid var(--ie-line); border-radius: var(--ie-radius); overflow: hidden; }
+.stat { background: var(--ie-bg); padding: 28px 24px; }
+.stat__v { font-family: var(--ie-font-display); font-size: clamp(2.2rem, 1.6rem + 2vw, 3.2rem); font-weight: 700; line-height: 1; }
+.stat__v small { font-size: .5em; color: var(--ie-amber); margin-left: 2px; }
+.stat__l { color: var(--ie-muted); margin-top: 8px; font-size: .95rem; }
+
+/* about */
+.about { display: grid; gap: 48px; align-items: center; }
+@media (min-width: 960px) { .about { grid-template-columns: 1fr 1fr; gap: 72px; } }
+.about__media { position: relative; border-radius: var(--ie-radius); overflow: hidden; aspect-ratio: 4/3.1; border: 1px solid var(--ie-line); }
+.about__media img { width: 100%; height: 100%; object-fit: cover; }
+.about__badge { position: absolute; left: 16px; bottom: 16px; display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 999px; background: rgba(13,13,15,.85); backdrop-filter: blur(6px); font-weight: 600; font-size: .9rem; }
+.about__badge i { width: 10px; height: 10px; border-radius: 50%; background: #3ddc84; box-shadow: 0 0 0 0 rgba(61,220,132,.6); animation: ping 2s infinite; }
+@keyframes ping { 70% { box-shadow: 0 0 0 10px rgba(61,220,132,0); } 100% { box-shadow: 0 0 0 0 rgba(61,220,132,0); } }
+.about h2 { font-size: clamp(2rem, 1.4rem + 2.4vw, 3.2rem); margin: 12px 0 20px; }
+.about p { color: #cfc9c2; }
+.quote { margin: 28px 0 0; padding: 22px 0 0 24px; border-left: 3px solid var(--ie-red); }
+.quote p { font-family: var(--ie-font-quote); font-style: italic; font-size: 1.7rem; line-height: 1.3; color: #fff; margin: 0; }
+.quote cite { display: block; margin-top: 8px; font-style: normal; color: var(--ie-muted); font-size: .9rem; letter-spacing: .12em; text-transform: uppercase; }
+
+/* reviews */
+.reviews { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.review { margin: 0; padding: 30px 28px; border-radius: var(--ie-radius); background: var(--ie-card); border: 1px solid var(--ie-line); }
+.stars { color: var(--ie-sun); letter-spacing: 3px; font-size: 1.1rem; }
+.review blockquote { margin: 14px 0 18px; color: #e4dfd9; }
+.review footer { color: var(--ie-muted); font-size: .95rem; }
+
+/* insta */
+.insta { display: grid; gap: 10px; grid-template-columns: repeat(3, 1fr); }
+@media (min-width: 900px) { .insta { grid-template-columns: repeat(6, 1fr); } }
+.insta .photo { aspect-ratio: 1; border-radius: 10px; font-size: .78rem; transition: transform .4s var(--ie-ease); }
+.insta .photo:hover { transform: scale(.97); }
+
+/* cta + form */
+.cta { position: relative; overflow: hidden; border-radius: 24px; background: radial-gradient(70% 90% at 90% 10%, rgba(247,162,27,.25), transparent 60%), linear-gradient(135deg, #c42a1d, #7d160f); padding: 48px 24px; display: grid; gap: 40px; }
+@media (min-width: 960px) { .cta { grid-template-columns: 1fr 1.1fr; padding: 72px 64px; } }
+.cta h2 { font-size: clamp(2.2rem, 1.6rem + 2.6vw, 3.6rem); }
+.cta p { color: #ffe7e2; margin-top: 16px; }
+.cta__contact { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 10px; }
+.cta__contact li { display: flex; gap: 12px; align-items: center; }
+.cta__contact svg { width: 20px; height: 20px; flex: none; }
+.form { display: grid; gap: 14px; background: rgba(13,13,15,.55); border: 1px solid rgba(255,255,255,.12); border-radius: 18px; padding: 24px; }
+@media (min-width: 600px) { .form { grid-template-columns: 1fr 1fr; padding: 32px; } }
+.field { display: grid; gap: 6px; min-width: 0; }
+.field--full { grid-column: 1 / -1; }
+.field label { font-size: .9rem; font-weight: 600; color: #f1ebe6; }
+.field input, .field select, .field textarea { width: 100%; min-height: 50px; padding: 12px 14px; border-radius: 10px; border: 1px solid #56565e; background: #121215; color: #fff; font: inherit; transition: border-color .25s, box-shadow .25s; }
+.field textarea { min-height: 120px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--ie-sun); box-shadow: 0 0 0 3px rgba(255,210,63,.25); }
+.form .btn { justify-self: start; background: #fff; color: #111; }
+.form .btn:hover { background: var(--ie-sun); }
+.form__status { grid-column: 1 / -1; margin: 0; min-height: 1.5em; color: var(--ie-sun); font-weight: 600; }
+
+/* footer */
+.footer { border-top: 1px solid var(--ie-line); padding: 64px 0 32px; color: var(--ie-muted); }
+.footer__grid { display: grid; gap: 36px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); }
+.footer h3 { font-size: .85rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ie-text); margin-bottom: 14px; }
+.footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.footer a { text-decoration: none; }
+.footer a:hover { color: #fff; }
+.footer__base { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; border-top: 1px solid var(--ie-line); margin-top: 48px; padding-top: 24px; font-size: .9rem; }
+.niceic { display: inline-flex; align-items: center; gap: 10px; margin-top: 16px; padding: 8px 14px; border: 1px solid var(--ie-line); border-radius: 10px; color: var(--ie-text); font-weight: 600; font-size: .9rem; }
+.niceic b { color: var(--ie-red); letter-spacing: .04em; }
+
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .sun .bolt { stroke-dashoffset: 0; fill-opacity: 1; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="concept-bar">Design concept 1 of 3: Eclipse. <a href="../index.html">Back to all concepts</a></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="ie-glow" cx="50%" cy="50%" r="50%"><stop offset=".70" stop-color="#ffd23f"/><stop offset=".84" stop-color="#f7a21b"/><stop offset="1" stop-color="#f7a21b" stop-opacity="0"/></radialGradient>
+    <radialGradient id="ie-disc" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#f4533d"/><stop offset="1" stop-color="#cf2a1d"/></radialGradient>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 005 5L15 12l5 2v4a2 2 0 01-2 2A16 16 0 013 5a2 2 0 012-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 6.5L12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0112 2.5a7 7 0 017 7C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  </defs>
+</svg>
+
+<header class="header" data-header>
+  <div class="wrap header__inner">
+    <a class="brand" href="#top" aria-label="Icarus Electric home">
+      <svg class="brand__mark" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="url(#ie-glow)"/><circle cx="100" cy="100" r="72" fill="url(#ie-disc)"/><path d="M140 2 L80 106 L106 102 L60 198 L124 88 L98 92 Z" fill="#fff" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="round"/></svg>
+      <span class="brand__word"><span class="brand__name">Icarus</span><span class="brand__sub">ELECTRIC</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu" data-nav-toggle><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Our work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Get in touch</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--primary header__cta" href="#contact">Get a free quote</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="wrap hero__inner">
+      <div>
+        <span class="eyebrow">NICEIC Approved Contractor</span>
+        <h1 id="hero-title">
+          <span class="line"><span style="--d:0">Electrical work</span></span>
+          <span class="line"><span style="--d:1">that goes <em>beyond</em></span></span>
+          <span class="line"><span style="--d:2">what's possible.</span></span>
+        </h1>
+        <p class="hero__lede">Domestic and commercial electrician with ten years in the trade. From full rewires and consumer units to testing, inspection and fit-outs, every job is finished clean, tidy and fully tested.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary" href="#contact">Get a free quote <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--ghost" href="#work">Explore our work</a>
+        </div>
+        <ul class="hero__trust">
+          <li><svg><use href="#i-check"/></svg>Domestic &amp; commercial</li>
+          <li><svg><use href="#i-check"/></svg>Every job tested &amp; certified</li>
+          <li><svg><use href="#i-check"/></svg>Clean, tidy finish as standard</li>
+        </ul>
+      </div>
+      <div class="sun" aria-hidden="true">
+        <div class="sun__glow"></div>
+        <div class="sun__ring"></div>
+        <div class="sun__ring sun__ring--2"></div>
+        <svg viewBox="0 0 200 200">
+          <g class="disc"><circle cx="100" cy="100" r="96" fill="url(#ie-glow)"/><circle cx="100" cy="100" r="72" fill="url(#ie-disc)"/></g>
+          <path class="bolt" d="M140 2 L80 106 L106 102 L60 198 L124 88 L98 92 Z" fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+    <span class="scroll-cue" aria-hidden="true"></span>
+  </section>
+
+  <section class="marquee" aria-label="Where we've worked">
+    <div class="marquee__label">Where we've worked</div>
+    <div class="marquee__track" aria-hidden="true">
+      <span>Family homes</span><span>New builds from scratch</span><span>Banks</span><span>Schools</span><span>Restaurants</span><span>Berlin Zoo</span><span>Workspaces</span>
+      <span>Family homes</span><span>New builds from scratch</span><span>Banks</span><span>Schools</span><span>Restaurants</span><span>Berlin Zoo</span><span>Workspaces</span>
+    </div>
+  </section>
+
+  <section class="section" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <div><span class="eyebrow">Featured project</span><h2 id="work-title">Work we're proud of</h2></div>
+        <p>A selection of recent domestic and commercial projects. Every one tested, certified and left spotless.</p>
+      </div>
+      <article class="featured" data-reveal>
+        <div class="featured__media photo"><span><span class="ph">[Photo: Berlin Zoo project]</span></span></div>
+        <div class="featured__body">
+          <span class="tag">Commercial · Refurbishment</span>
+          <h3>Berlin Zoo refurbishment</h3>
+          <p>Part of the electrical team on a refurbishment project at one of the world's best-known zoos. <span class="ph">[Short project summary from Kevin]</span></p>
+          <a class="btn btn--ghost" href="#contact" style="align-self:flex-start;margin-top:8px">Discuss a project <svg><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+      <div class="work">
+        <a class="work__card" href="#contact" data-reveal style="--i:0">
+          <div class="photo"><img src="../assets/van-wide.jpg" alt="The Icarus Electric van on a job" loading="lazy" width="1200" height="744"></div>
+          <div class="work__body"><span class="tag">Domestic</span><h3>Full house rewire</h3><p><span class="ph">[Location]</span> · New circuits, consumer unit and full certification.</p><span class="work__more">View project <svg><use href="#i-arrow"/></svg></span></div>
+        </a>
+        <a class="work__card" href="#contact" data-reveal style="--i:1">
+          <div class="photo"><span><span class="ph">[Project photo]</span></span></div>
+          <div class="work__body"><span class="tag">New build</span><h3>House built from scratch</h3><p>First fix to final certificate on a brand-new home.</p><span class="work__more">View project <svg><use href="#i-arrow"/></svg></span></div>
+        </a>
+        <a class="work__card" href="#contact" data-reveal style="--i:2">
+          <div class="photo"><span><span class="ph">[Project photo]</span></span></div>
+          <div class="work__body"><span class="tag">Commercial</span><h3>Restaurant fit-out</h3><p>Kitchen power, feature lighting and emergency lighting.</p><span class="work__more">View project <svg><use href="#i-arrow"/></svg></span></div>
+        </a>
+        <a class="work__card" href="#contact" data-reveal style="--i:0">
+          <div class="photo"><span><span class="ph">[Project photo]</span></span></div>
+          <div class="work__body"><span class="tag">Commercial</span><h3>Bank branch works</h3><p>Careful, compliant work in a live, secure environment.</p><span class="work__more">View project <svg><use href="#i-arrow"/></svg></span></div>
+        </a>
+        <a class="work__card" href="#contact" data-reveal style="--i:1">
+          <div class="photo"><span><span class="ph">[Project photo]</span></span></div>
+          <div class="work__body"><span class="tag">Education</span><h3>School electrical upgrade</h3><p>Planned around the timetable to keep disruption low.</p><span class="work__more">View project <svg><use href="#i-arrow"/></svg></span></div>
+        </a>
+        <a class="work__card" href="#contact" data-reveal style="--i:2">
+          <div class="photo"><span><span class="ph">[Project photo]</span></span></div>
+          <div class="work__body"><span class="tag">Domestic</span><h3>Kitchen &amp; lighting upgrade</h3><p>Smart lighting and extra circuits for a modern kitchen.</p><span class="work__more">View project <svg><use href="#i-arrow"/></svg></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services" aria-labelledby="services-title" style="padding-top:0">
+    <div class="wrap services">
+      <div class="services__intro"><div class="sticky" data-reveal>
+        <span class="eyebrow">Services</span>
+        <h2 id="services-title" style="font-size:clamp(2rem,1.4rem + 2.4vw,3.2rem);margin:12px 0 20px">Complete electrical services, done properly.</h2>
+        <p>Homes, landlords and businesses. Whatever the job, it's planned carefully, carried out efficiently and tested thoroughly before handover.</p>
+        <a class="btn btn--primary" href="#contact">Talk about your job <svg><use href="#i-arrow"/></svg></a>
+      </div></div>
+      <div class="acc" data-reveal>
+        <details open>
+          <summary><span class="acc__num">01</span>Rewires &amp; new installations<span class="acc__icon" aria-hidden="true"></span></summary>
+          <div class="acc__body">Full and partial rewires, extensions and new builds wired from scratch. Routed neatly, made good and fully certified.<ul><li>Full &amp; partial rewires</li><li>Extensions &amp; loft conversions</li><li>New-build first &amp; second fix</li></ul></div>
+        </details>
+        <details>
+          <summary><span class="acc__num">02</span>Consumer unit upgrades<span class="acc__icon" aria-hidden="true"></span></summary>
+          <div class="acc__body">Replace an old fuse box with a modern consumer unit, with RCBO and surge protection to current regulations.</div>
+        </details>
+        <details>
+          <summary><span class="acc__num">03</span>Testing &amp; inspection (EICR)<span class="acc__icon" aria-hidden="true"></span></summary>
+          <div class="acc__body">When was your property last tested? Electrical Installation Condition Reports for homeowners, landlords and businesses, with clear findings and honest advice.</div>
+        </details>
+        <details>
+          <summary><span class="acc__num">04</span>Lighting design &amp; installation<span class="acc__icon" aria-hidden="true"></span></summary>
+          <div class="acc__body">Indoor, outdoor and feature lighting, LED upgrades and smart controls. Lighting you didn't know was possible.</div>
+        </details>
+        <details>
+          <summary><span class="acc__num">05</span>Commercial electrical<span class="acc__icon" aria-hidden="true"></span></summary>
+          <div class="acc__body">Fit-outs and maintenance for offices, shops, restaurants and schools. Experience across banks, schools and hospitality.</div>
+        </details>
+        <details>
+          <summary><span class="acc__num">06</span>Fault finding &amp; repairs<span class="acc__icon" aria-hidden="true"></span></summary>
+          <div class="acc__body">Tripping circuits, dead sockets and flickering lights, diagnosed methodically and fixed properly the first time.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band" aria-labelledby="process-title">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <div><span class="eyebrow">How we work</span><h2 id="process-title">Test. Install. Inspect.</h2></div>
+        <p>How do you know your property is safe? The same thorough three steps on every job, big or small.</p>
+      </div>
+      <div class="steps">
+        <div class="step" data-reveal style="--i:0"><div class="step__n">01</div><h3>Test</h3><p>We start by understanding exactly what's there, so there are no surprises and no guesswork.</p></div>
+        <div class="step" data-reveal style="--i:1"><div class="step__n">02</div><h3>Install</h3><p>Efficient, careful work that protects your home or workspace, with clean and tidy finishes as standard.</p></div>
+        <div class="step" data-reveal style="--i:2"><div class="step__n">03</div><h3>Inspect</h3><p>Everything is fully tested and certified before we hand it back. Nothing is left to chance.</p></div>
+      </div>
+      <div class="stats" data-reveal>
+        <div class="stat"><div class="stat__v"><span data-count="10">10</span><small>yrs</small></div><div class="stat__l">in the electrical trade</div></div>
+        <div class="stat"><div class="stat__v"><span data-count="100">100</span><small>%</small></div><div class="stat__l">of our work comes from recommendations</div></div>
+        <div class="stat"><div class="stat__v">NICEIC</div><div class="stat__l">approved contractor</div></div>
+        <div class="stat"><div class="stat__v">Free</div><div class="stat__l">quotes, with honest advice</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="wrap about">
+      <div class="about__media" data-reveal>
+        <img src="../assets/van-wide.jpg" alt="Icarus Electric van with the message Test, Install, Inspect" loading="lazy" width="1200" height="744">
+        <span class="about__badge"><i aria-hidden="true"></i>Taking on new projects</span>
+      </div>
+      <div data-reveal style="--i:1">
+        <span class="eyebrow">About Icarus</span>
+        <h2 id="about-title">Inspired by legends. Going the extra mile.</h2>
+        <p>Icarus Electric was inspired by the legend of Icarus, with the ethos of going beyond what's possible. Nothing is a problem, just another challenge to overcome.</p>
+        <p>Run by Kevin Peck, with ten years' experience building houses from scratch and working in banks, schools, restaurants and even Berlin Zoo. Mainly working in homes, Kevin prides himself on thorough testing and giving people something they didn't even know was possible.</p>
+        <blockquote class="quote"><p>“There's a better way to do it. Find it.”</p><cite>Thomas Edison</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="reviews" aria-labelledby="reviews-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <div><span class="eyebrow">Reviews</span><h2 id="reviews-title">Built on recommendation</h2></div>
+        <p>All of our work to date has come through word of mouth. Here's what customers say.</p>
+      </div>
+      <div class="reviews">
+        <figure class="review" data-reveal style="--i:0"><div class="stars" aria-label="5 out of 5">★★★★★</div><blockquote><span class="ph">[Customer review]</span></blockquote><footer><span class="ph">[Name, area]</span></footer></figure>
+        <figure class="review" data-reveal style="--i:1"><div class="stars" aria-label="5 out of 5">★★★★★</div><blockquote><span class="ph">[Customer review]</span></blockquote><footer><span class="ph">[Name, area]</span></footer></figure>
+        <figure class="review" data-reveal style="--i:2"><div class="stars" aria-label="5 out of 5">★★★★★</div><blockquote><span class="ph">[Customer review]</span></blockquote><footer><span class="ph">[Name, area]</span></footer></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="insta-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <div><span class="eyebrow">On the job</span><h2 id="insta-title">Follow the work</h2></div>
+        <p>Before and afters, tidy boards and finished projects. <span class="ph">[@instagram handle]</span></p>
+      </div>
+      <div class="insta">
+        <div class="photo" data-reveal style="--i:0"><span class="ph">[Photo]</span></div>
+        <div class="photo" data-reveal style="--i:1"><span class="ph">[Photo]</span></div>
+        <div class="photo" data-reveal style="--i:2"><span class="ph">[Photo]</span></div>
+        <div class="photo" data-reveal style="--i:3"><span class="ph">[Photo]</span></div>
+        <div class="photo" data-reveal style="--i:4"><span class="ph">[Photo]</span></div>
+        <div class="photo" data-reveal style="--i:5"><span class="ph">[Photo]</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" aria-labelledby="contact-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta" data-reveal>
+        <div>
+          <span class="eyebrow" style="color:#ffd9a0">Get in touch</span>
+          <h2 id="contact-title" style="margin-top:12px">Have a project in mind?</h2>
+          <p>Tell us a little about the job and we'll get back to you with honest advice and a free quote.</p>
+          <ul class="cta__contact">
+            <li><svg><use href="#i-phone"/></svg><span class="ph">[Phone number]</span></li>
+            <li><svg><use href="#i-mail"/></svg><span class="ph">[Email address]</span></li>
+            <li><svg><use href="#i-pin"/></svg>Covering <span class="ph">[Service area]</span></li>
+          </ul>
+        </div>
+        <form class="form" action="#" method="post" data-demo>
+          <div class="field"><label for="c1-name">Name</label><input id="c1-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="c1-phone">Phone</label><input id="c1-phone" name="phone" type="tel" autocomplete="tel"></div>
+          <div class="field field--full"><label for="c1-email">Email</label><input id="c1-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field field--full"><label for="c1-type">Type of work</label>
+            <select id="c1-type" name="type"><option>Rewire or new installation</option><option>Consumer unit upgrade</option><option>Testing &amp; inspection (EICR)</option><option>Lighting</option><option>Commercial work</option><option>Fault finding &amp; repairs</option><option>Something else</option></select></div>
+          <div class="field field--full"><label for="c1-msg">About the job</label><textarea id="c1-msg" name="message"></textarea></div>
+          <button class="btn" type="submit">Send enquiry <svg><use href="#i-arrow"/></svg></button>
+          <p class="form__status" role="status" data-form-status></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="#top" aria-label="Icarus Electric home">
+          <svg class="brand__mark" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="url(#ie-glow)"/><circle cx="100" cy="100" r="72" fill="url(#ie-disc)"/><path d="M140 2 L80 106 L106 102 L60 198 L124 88 L98 92 Z" fill="#fff" stroke="#1a1a1a" stroke-width="3" stroke-linejoin="round"/></svg>
+          <span class="brand__word"><span class="brand__name" style="color:var(--ie-text)">Icarus</span><span class="brand__sub">ELECTRIC</span></span>
+        </a>
+        <p style="margin-top:16px">Test · Install · Inspect</p>
+        <span class="niceic"><b>NICEIC</b> Approved Contractor</span>
+      </div>
+      <div><h3>Services</h3><ul><li><a href="#services">Rewires</a></li><li><a href="#services">Consumer units</a></li><li><a href="#services">Testing &amp; inspection</a></li><li><a href="#services">Lighting</a></li><li><a href="#services">Commercial</a></li></ul></div>
+      <div><h3>Company</h3><ul><li><a href="#work">Our work</a></li><li><a href="#about">About</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h3>Contact</h3><ul><li><span class="ph">[Phone number]</span></li><li><span class="ph">[Email address]</span></li><li><span class="ph">[Service area]</span></li></ul></div>
+    </div>
+    <div class="footer__base"><span>© <span data-year>2026</span> Icarus Electric. All rights reserved.</span><span><a href="#top">Privacy</a> · <a href="#top">Terms</a></span></div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const d = document;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  d.documentElement.classList.add('js');
+
+  const header = d.querySelector('[data-header]');
+  const toggle = d.querySelector('[data-nav-toggle]');
+  const setOpen = (open) => { header.classList.toggle('is-open', open); toggle.setAttribute('aria-expanded', String(open)); };
+  toggle.addEventListener('click', () => setOpen(!header.classList.contains('is-open')));
+  d.querySelectorAll('#site-nav a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+  const onScroll = () => header.classList.toggle('is-scrolled', scrollY > 8);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  const countUp = (el) => {
+    const end = +el.dataset.count; if (reduce) return;
+    const t0 = performance.now(), dur = 1400;
+    const tick = (t) => { const p = Math.min((t - t0) / dur, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); };
+    el.textContent = '0'; requestAnimationFrame(tick);
+  };
+  const els = d.querySelectorAll('[data-reveal]');
+  if (reduce || !('IntersectionObserver' in window)) { els.forEach((e) => e.classList.add('is-in')); }
+  else {
+    const io = new IntersectionObserver((entries) => entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add('is-in');
+      en.target.querySelectorAll('[data-count]').forEach(countUp);
+      io.unobserve(en.target);
+    }), { rootMargin: '0px 0px -8% 0px' });
+    els.forEach((e) => io.observe(e));
+  }
+
+  d.querySelectorAll('form[data-demo]').forEach((f) => f.addEventListener('submit', (e) => {
+    e.preventDefault();
+    f.querySelector('[data-form-status]').textContent = 'Thanks! This is a design concept, so the form does not send yet.';
+  }));
+  d.querySelectorAll('[data-year]').forEach((y) => { y.textContent = new Date().getFullYear(); });
+})();
+</script>
+</body>
+</html>
